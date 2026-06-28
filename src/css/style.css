@@ -75,14 +75,15 @@ input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
 #mode-prev:hover, #mode-next:hover { border-color: var(--text); }
 
 /* Mode controls — grid overlay so height stays stable */
-#mode-controls { display: grid; place-items: center; }
+#mode-controls { position: relative; height: 2rem; display: flex; justify-content: center; align-items: center; }
 #figur-controls, #stellung-controls {
-  grid-area: 1 / 1;
-  display: flex; gap: var(--gap); align-items: flex-end; flex-wrap: wrap; justify-content: center;
+  position: absolute;
+  display: flex; gap: var(--gap); align-items: center; flex-wrap: nowrap; justify-content: center;
   transition: opacity 0.15s;
+  white-space: nowrap;
 }
-#figur-controls.hidden, #stellung-controls.hidden { opacity: 0; pointer-events: none; z-index: 0; }
-#figur-controls:not(.hidden), #stellung-controls:not(.hidden) { z-index: 1; }
+#figur-controls.hidden, #stellung-controls.hidden { opacity: 0; pointer-events: none; }
+#figur-controls:not(.hidden), #stellung-controls:not(.hidden) { opacity: 1; pointer-events: auto; }
 #figur-controls label { display: flex; flex-direction: column; gap: 0.25rem; }
 
 /* Origin input */
@@ -124,7 +125,7 @@ select.active { border-color: var(--text); color: var(--text); }
 
 /* Main layout */
 #main-area { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; width: 100%; }
-#board-wrap { display: flex; flex-direction: column; gap: var(--gap); }
+#board-wrap { display: flex; flex-direction: column; gap: var(--gap); min-height: var(--board-size); }
 #board-2d, #board-3d { display: none; }
 canvas { display: block; border: 2px solid var(--border); cursor: pointer; }
 #legend { border-top: none; cursor: default; }
@@ -201,6 +202,7 @@ canvas { display: block; border: 2px solid var(--border); cursor: pointer; }
   border: 1px solid var(--border);
   border-radius: var(--r);
   width: 100%;
+  min-height: 4rem;
 }
 .legend-item { display: flex; align-items: center; gap: 0.6rem; }
 .legend-swatch {

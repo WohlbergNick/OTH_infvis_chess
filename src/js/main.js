@@ -88,8 +88,8 @@ function updateVizLegend() {
   // Gewinnrate-Button nur in 3D klickbar
   const winrateBtn = document.getElementById("toggle-winrate");
   if (winrateBtn) {
-    winrateBtn.disabled = !is3D;
     winrateBtn.style.opacity = is3D ? "1" : "0.35";
+    winrateBtn.style.pointerEvents = is3D ? "auto" : "none";
     winrateBtn.title = is3D ? "" : "Nur in 3D verfügbar";
   }
 
