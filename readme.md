@@ -89,7 +89,7 @@ Unsere Anwendung finder ihre größte Konkurrenz für ihren Use-Case in den mode
 
 Bei unserem Ansatz ist es jedoch so das nur viel gespielte Stellungen bei der Gewinnverteilung akkurate (also ähnliche Ergebnisse wie etablierte Schach Engines) Ergebnisse liefert. Und ebenso nicht jede Stellung in den 20.000 Partien vorkommt, als Beispiel pro Zug exisitieren ca. 20 Züge, das bedeutet das nach 4 Zügen (20 * 20 * 20 * 20 = 160.000 > 20.000)  gar nicht mehr alle möglichen Stellungen abgedeckt werden können.
 
-Unser Vorteil im direkten Vergleich ist jedoch das wir die Menschliche Muster und auch Menschliche Fehler im Natürlichen Spiel darstellen und nio
+Unser Vorteil im direkten Vergleich ist jedoch das wir die Menschliche Muster und auch Menschliche Fehler im Natürlichen Spiel darstellen und präsentieren können und damit nicht nur das perfekte "Roboter Spiel" Visualisieren können sondern auch "human flaws" im Bezug auf Schach darstellen können.
 
 
 ## EEG Studie
